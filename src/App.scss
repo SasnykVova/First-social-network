@@ -1,0 +1,35 @@
+.app-wrapper {
+    max-width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    "h h"
+    "n m";
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 1.5fr 10fr;
+}
+
+.active-linkOne {
+    background-color: #4185f3;
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    color: inherit;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+.active-linkTwo {
+    background-color: #E8419D;
+}
+.active-linkThree {
+    background-color: #2AE8C5;
+
+}
+.active-linkOneFour {
+    background-color: #E8A213;
+
+}
+.active-linkOneFive {
+    background-color: #26E81E;
+}

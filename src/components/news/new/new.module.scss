@@ -1,0 +1,20 @@
+.new {
+    padding: 15px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    &__text {
+        padding: 0 0 0 15px;
+        color: white;
+    }
+
+    &__userAvatar img{
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+    }
+}

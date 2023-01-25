@@ -1,0 +1,124 @@
+div {
+    color: black;
+}
+.user {
+    font-size: 20px;
+    padding: 15px;
+
+    &__wrapper {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        border: 1px solid grey;
+        border-radius: 30px;
+    }
+
+    &__infoWrapper {
+        display: flex;
+        gap: 500px;
+        align-items: center;
+    }
+}
+
+.avatarButtonWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+
+    &__avatar {}
+
+    &__buttonContainer {
+        padding: 10px 0 0 0;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__buttonUnfollow {
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: 800;
+
+        &:hover {
+            background-color: #E79318;
+            color: white;
+        }
+    }
+
+    &__buttonFollow {
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: 800;
+        background-color: #E79318;
+        color: white;
+
+        &:hover {
+            background-color: rgba(133, 133, 133, 0.76);
+            color: white;
+        }
+    }
+}
+
+.avatarButtonWrapper {
+
+    &__avatar img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.nameContainer {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    &__name {
+        color: black;
+    }
+
+    &__status {
+        color: black;
+    }
+}
+
+.locationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    &__country {
+        color: black;
+    }
+
+    &__city {
+        color: black;
+    }
+}
+
+.getUsersbtn {
+    margin: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    color: white;
+    background-color: #E79318;
+    &:hover {
+        background-color: rgba(133, 133, 133, 0.76);
+    }
+}
+.selectedPage {
+    cursor: default;
+    font-weight: 900;
+    color: black;
+}
+span { 
+    cursor: default; 
+}
+.pageNumber {
+    color: black;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 auto;
+}

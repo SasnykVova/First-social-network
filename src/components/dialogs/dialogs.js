@@ -2,6 +2,8 @@ import s from './dialogs.module.scss';
 import Dialog from './dialog/dialog';
 import Message from './message/message';
 import Avatar from './avatar/avatar';
+import { Navigate } from 'react-router-dom';
+
 
 
 
@@ -19,6 +21,7 @@ const Dialogs = (props) => {
         props.newElementChange(body);
     }
 
+    if (props.auth.isAuth === false) return <Navigate to={"/login"}/>
     return (
         <div className={s.dialogs}>
             <div className={s.dialogs__wrapperAvata}>

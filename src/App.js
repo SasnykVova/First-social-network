@@ -1,6 +1,6 @@
 import './App.css';
 import s from './App.scss';
-import Navbar from './components/navbar/navbar';
+// import Navbar from './components/navbar/navbar';
 import { Routes, Route } from "react-router-dom";
 import Music from './components/music/music';
 import Settings from './components/settings/settings';
@@ -10,13 +10,14 @@ import UsersContainer from './components/users/usersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import HeaderContainer from './components/header/headerContainer';
 import Login from './components/login/login';
+import NavbarContainer from './components/navbar/navbarContainer';
 
 const App = () => {
 
   return (
       <div className='app-wrapper'>
         <HeaderContainer className={s.app__header}/>
-        <Navbar />
+        <NavbarContainer/>
         <div className="main-content">
           <Routes>
             <Route path="/profile/:userId" element={<ProfileContainer/>} />

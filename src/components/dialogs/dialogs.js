@@ -21,7 +21,7 @@ const Dialogs = (props) => {
         props.newElementChange(body);
     }
 
-    if (props.auth.isAuth === false) return <Navigate to={"/login"}/>
+    if (!props.auth.isAuth) return <Navigate to={"/login"}/>
     return (
         <div className={s.dialogs}>
             <div className={s.dialogs__wrapperAvata}>

@@ -3,15 +3,15 @@ import s from './navbar.module.scss';
 import './navbar.scss';
 // import clsx from 'clsx';
 
-let addActive = () => {
-}
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <nav className={s.menu}>
             <ul className={s.menu__list}>
                 <li className="menu__item">
-                    <NavLink onClick={addActive} to="/profile" className={s.menu__link}>Profile</NavLink>
+                    <NavLink to={props.auth.isAuth 
+                    ? "/profile/" + props.auth.userId
+                    : "/login"} className={s.menu__link}>Profile</NavLink>
                 </li>
                 <li className="menu__item">
                     <NavLink to="/dialogs" className={s.menu__link}>Messages</NavLink>
@@ -31,5 +31,6 @@ const Navbar = () => {
         </nav>
     );
 }
+
 
 export default Navbar;

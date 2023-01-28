@@ -1,4 +1,5 @@
 import s from './profileinfo.module.scss';
+import ProfileStatus from './profileStatus';
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -12,7 +13,7 @@ const ProfileInfo = (props) => {
                     <div className={s.blockuser__name}>{props.profile.fullName}</div>
                 </div>
                 <div className={s.blockuser}>
-                    <div>Status: {props.profile.aboutMe}</div>
+                    <div className={s.blockuser__status}>Status: <ProfileStatus status={"Hello my friends !"}/></div>
                     <div>Street: Shevchenka</div>
                     <div>Number: 0990963186</div>
                 </div>

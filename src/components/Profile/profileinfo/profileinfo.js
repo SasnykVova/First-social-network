@@ -13,7 +13,7 @@ const ProfileInfo = (props) => {
                     <div className={s.blockuser__name}>{props.profile.fullName}</div>
                 </div>
                 <div className={s.blockuser}>
-                    <div className={s.blockuser__status}>Status: <ProfileStatus status={"Hello my friends !"}/></div>
+                    <div className={s.blockuser__status}>Status: <ProfileStatus status={props.status} updateStatus={props.updateStatus}/></div>
                     <div>Street: Shevchenka</div>
                     <div>Number: 0990963186</div>
                 </div>

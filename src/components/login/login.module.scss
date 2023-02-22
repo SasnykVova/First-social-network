@@ -1,11 +1,20 @@
 .login{
     color: black;
+    background-color: rgba(42, 123, 190, 0.705);
+    height: 100%;
+    width: 100%;
 
 
     &__title {
-        padding: 15px 0 0 15px;
+        padding: 15px 0 15px 15px;
         font-size: 30px;
         font-weight: 900;
-
+        
+    }
+    &__form {
+        padding: 0 0 0 15px;
+    }
+    &__form > div {
+        margin-bottom: 10px;
     }
 }

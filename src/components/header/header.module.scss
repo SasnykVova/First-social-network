@@ -22,9 +22,36 @@
     font-size: 25px;
     font-weight: 900;
 
+    &__login {
+        color: white;
+    }
+
     &__loginLink {
         color: white;
         font-size: 20px;
         font-weight: 700;
+    }
+}
+.loginLogOutBlock {
+
+    &__login {}
+
+    &__wrapperButton{
+        display: flex;
+        justify-content: center;
+        padding: 5px 0px;
+    }
+
+    &__button {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 3px 15px;
+        border-radius: 5px;
+        background-color: grey;
+        color: white;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
     }
 }

@@ -5,23 +5,29 @@ import { required } from '../../validators/validators';
 import { connect } from 'react-redux';
 import { login } from '../../redux/auth-reducer';
 import { Navigate } from 'react-router-dom';
+import React from 'react';
 
-const Login = (props) => {
-    const onSubmit = (formData) => {
-        props.login(formData.email, formData.password, formData.rememberMe);
+
+class Login extends React.Component {
+
+    onSubmit = (formData) => {
+        this.props.login(formData.email, formData.password, formData.rememberMe);
     }
-
-    if (props.isAuth) {
-        return <Navigate to={"/profile/" + props.userId} />
-    }
-
-    return (
-        <div class={s.login}>
+    render () {
+        if (this.props.isAuth) {
+            return <Navigate to={"/profile/" + this.props.userId} />
+        }
+        return (
+            <div class={s.login}>
             <h1 class={s.login__title}>Login</h1>
-            <LoginRedaxForm onSubmit={onSubmit} />
+            <LoginRedaxForm onSubmit={this.onSubmit} />
         </div>
-    )
+        )
+    }
 }
+// if (this.props.isAuth) {
+//     return <Navigate to={"/profile/" + this.props.userId} />
+// }
 
 const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth,

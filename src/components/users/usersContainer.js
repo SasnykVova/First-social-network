@@ -5,20 +5,31 @@ import React from "react";
 // import axios from "axios";
 // import s from "./usersContainer.module.scss";
 import Preloader from "../common/preloader";
+import { getCurrentPage, getFollowingInProgress, getIsFetching, getPageSize, getTotalUsersCount, getUsersProp } from "../../redux/users-selectors";
 
 
+
+// let mapStateToProps = (state) => {
+//     return {
+//         usersData: state.usersPage.usersData,
+//         pageSize: state.usersPage.pageSize,
+//         totalUsersCount: state.usersPage.totalUsersCount,
+//         currentPage: state.usersPage.currentPage,
+//         isFetching: state.usersPage.isFetching,
+//         followingInProgress: state.usersPage.followingInProgress,
+//     }
+// }
 
 let mapStateToProps = (state) => {
     return {
-        usersData: state.usersPage.usersData,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        followingInProgress: state.usersPage.followingInProgress,
+        usersData: getUsersProp(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        followingInProgress: getFollowingInProgress(state),
     }
 }
-
 class UsersContainer extends React.Component {
     componentDidMount = () => {
         this.props.getUsers(this.props.currentPage, this.props.pageSize);
@@ -32,7 +43,7 @@ class UsersContainer extends React.Component {
     }
 
     onPageChanged = (pageNumber) => {
-        this.props.getUsers(this.props.pageSize, pageNumber);
+        this.props.getUsers(pageNumber, this.props.pageSize);
         // this.props.toggleIsFetching(true);
         // usersAPI.getUsers(pageNumber, this.props.pageSize).then(data => {
         //     this.props.setUsers(data.items);
@@ -57,6 +68,7 @@ class UsersContainer extends React.Component {
         </>
     }
 }
+
 
 export default connect(mapStateToProps,
     {

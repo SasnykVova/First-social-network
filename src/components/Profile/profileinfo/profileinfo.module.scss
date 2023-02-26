@@ -3,38 +3,88 @@
     width: 100px;
     height: 100px;
 }
+
 .aboutuser {
     font-size: 16px;
-    font-weight: 600;
     display: flex;
-    padding: 30px 0 0 15px;
-    gap: 200px;
+    color: black;
 }
 
-.avatardiv {}
+.avatardiv {
+    flex: 1 0 50%;
 
-.avatardiv img {
-    width: 100px;
-    height: 100px;
-}
-
-.blockuser {
-    padding-left: 15px;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+    }
 
     &__name {
         font-size: 20px;
         font-weight: 800;
         padding-bottom: 15px;
     }
+}
+
+.avatardiv img {
+    width: 100px;
+    height: 100px;
+}
+
+.blockuserContacts {
+    flex: 1 0 25%;
+    padding-left: 15px;
+
+    &__statusBlock {
+        padding: 10px;
+        background: white;
+        border-radius: 20px;
+        border: 1px solid gray;
+    }
+    &__statusWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__statusTitle {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__status {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    &__live {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0 0 0;
+        padding: 10px;
+        background: white;
+        border-radius: 20px;
+        border: 1px solid gray;
+    }
+    &__street {
+    }
+    &__number {
+    }
+    &__titleh5 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
     &__status {
         padding: 20px 0px;
         line-height: 125%;
     }
-}
-.blockuser > div {
-    color: white;
-}
-
-div {
-    color: white;
+    &__social {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0 0 0;
+        padding: 10px;
+        background: white;
+        border-radius: 20px;
+        border: 1px solid gray;
+    }
 }

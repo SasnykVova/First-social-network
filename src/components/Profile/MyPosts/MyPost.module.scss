@@ -1,23 +1,47 @@
 .MyPost {
     padding: 20px 0px 0px 15px;
+    display: flex;
+    justify-content: right;
 
+    &__wrapper {
+        width: 37%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    &__inputWrapper {
+        padding: 15px 15px 0px 15px;
+        background: white;
+        border-radius: 20px;
+        border: 1px solid grey;
+
+    
+    }
     &__title {
         font-size: 20px;
         font-weight: 700;
-        padding: 15px 0px;
     }
 
+    &__inputPostWrapper {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
     &__wrapperTextarea {
         padding: 15px 0px;
     }
 
     &__textarea {
-        border: 1px solid grey;
+        border: 1px solid rgb(128, 128, 128);
         border-radius: 10px;
+        width: 350px;
+        height: 45px;
+        padding: 10px 0 0 10px;
+        font-size: 16px;
     }
 
     &__wrapperButton {
-        padding: 0 0 40px 20px;
     }
 
     &__button {
@@ -26,5 +50,13 @@
         color: white;
         font-weight: 800;
         background-color: #E79318;
+    }
+
+    &__posts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px 15px 15px 15px;
+        border-radius: 20px;
     }
 }

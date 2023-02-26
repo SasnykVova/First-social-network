@@ -1,7 +1,12 @@
 .Post {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    background: white;
     
     &__wrapperUser {
-        display: flex;
     }
 
     &__img {
@@ -19,6 +24,5 @@
     }
 
     &__likeNumber {
-        margin: 5px 0px 25px 0px;
     }
 }

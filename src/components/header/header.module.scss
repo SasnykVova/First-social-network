@@ -1,6 +1,5 @@
 .header {
     grid-area: h;
-    background: grey;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +12,15 @@
         }
     }
 
-    &__img {
+    &__img {}
+
+    &__logoKvadratWrapper {}
+
+    &__logoKvadrat {
+        display: flex;
+        height: 50px;
+        width: 50px;
+        background-color: #5cc4bac7;
     }
 }
 
@@ -32,11 +39,14 @@
         font-weight: 700;
     }
 }
+
 .loginLogOutBlock {
 
-    &__login {}
+    &__login {
+        color: grey;
+    }
 
-    &__wrapperButton{
+    &__wrapperButton {
         display: flex;
         justify-content: center;
         padding: 5px 0px;
@@ -47,11 +57,10 @@
         font-weight: 700;
         padding: 3px 15px;
         border-radius: 5px;
-        background-color: grey;
+        background-color: #5cc4bac7;
         color: white;
+
         &:hover {
-            background-color: white;
-            color: black;
         }
     }
 }

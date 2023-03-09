@@ -13,6 +13,7 @@ const Preloader = (props) => {
                 unFollow={props.unFollow}
                 follow={props.follow} 
                 followingInProgress={props.followingInProgress}
+                portionSize={props.portionSize}
                 />}
         </div>
     )

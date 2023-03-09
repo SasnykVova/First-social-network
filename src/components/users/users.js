@@ -1,25 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import s from './users.module.scss';
 import clsx from 'clsx';
 import userPhoto from '../../assets/images/userAvatar.png';
 import { NavLink } from "react-router-dom";
 // import axios from "axios";
 
-const Users = (props) => {
+const Users = (props) => { 
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
+    console.log(props.totalUsersCount, props.pageSize);
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
+    let portionSize = props.portionSize;
+    let portionCount = Math.ceil(pagesCount / portionSize)
+    const [portionNumber, setPortionNumber] = useState(1);
+    let leftPortionPageNumber = (portionNumber - 1) * portionSize + 1;
+    let rightPortionPageNumber = portionNumber * portionSize;
+
+    console.log(leftPortionPageNumber);
 
     return (
         <div className={s.userPage}>
             <div>
-                {pages.map(p =>
+            { portionNumber > 1 && 
+            <button onClick={() => { setPortionNumber(portionNumber - 1)}}>PREV</button>}
+
+                {pages
+                .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
+                .map(p =>
                     <span className={clsx(s.pageNumber, props.currentPage === p && s.selectedPage)}
-                        onClick={(e) => { props.onPageChanged(p) }} >{p > 8 ? p === 8 : p}</span>
+                        onClick={(e) => {console.log(leftPortionPageNumber);  props.onPageChanged(p) }} >{p}</span>
                 )}
+                { portionCount > portionNumber && 
+                <button onClick={ () => setPortionNumber(portionNumber + 1)}>NEXT</button>}
             </div>
             {
                 props.usersData.map(u => <div className={s.user} key={u.id} >

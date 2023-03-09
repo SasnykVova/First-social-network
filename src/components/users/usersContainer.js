@@ -5,7 +5,7 @@ import React from "react";
 // import axios from "axios";
 // import s from "./usersContainer.module.scss";
 import Preloader from "../common/preloader";
-import { getCurrentPage, getFollowingInProgress, getIsFetching, getPageSize, getTotalUsersCount, getUsersProp } from "../../redux/users-selectors";
+import { getCurrentPage, getFollowingInProgress, getIsFetching, getPageSize, getPortionSize, getTotalUsersCount, getUsersProp } from "../../redux/users-selectors";
 
 
 
@@ -28,6 +28,7 @@ let mapStateToProps = (state) => {
         currentPage: getCurrentPage(state),
         isFetching: getIsFetching(state),
         followingInProgress: getFollowingInProgress(state),
+        portionSize: getPortionSize(state),
     }
 }
 class UsersContainer extends React.Component {
@@ -63,7 +64,8 @@ class UsersContainer extends React.Component {
                 unFollow={this.props.unFollow}
                 follow={this.props.follow}
                 isFetching={this.props.isFetching}  
-                followingInProgress={this.props.followingInProgress}           
+                followingInProgress={this.props.followingInProgress}    
+                portionSize={this.props.portionSize}       
                 />
         </>
     }

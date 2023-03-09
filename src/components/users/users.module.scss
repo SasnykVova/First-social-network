@@ -112,13 +112,32 @@ div {
     cursor: default;
     font-weight: 900;
     color: black;
+    background-color: #5cc4bac7;
 }
 span { 
     cursor: default; 
 }
 .pageNumber {
+    display: flex;
+    text-align: center;
     color: black;
     font-size: 20px;
     display: inline-block;
-    margin: 0 auto;
+    margin: 1px;
+    border: 1px solid #000;
+    width: 25px;
+    height: 25px;
+}
+button {
+    border: 1px solid #000;
+    margin: 0 10px 0 10px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 3px 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: #000;
+    &:hover {
+        background-color: #5cc4bac7;
+    }
 }

@@ -15,6 +15,8 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import PreloaderDefault from './components/preloaderDefault/preloaderDefault';
 import { initializeApp } from './redux/app-reducer';
+// const DialogsContainer = React.lazy(() => import('./components/dialogs/dialogsContainer'));
+// const ProfileContainer = React.lazy(() => import('./components/news/newsContainer'));
 
 
 class App extends React.Component {

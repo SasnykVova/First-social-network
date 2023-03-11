@@ -1,6 +1,35 @@
+.userPage {
+
+    &__paginator {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__paginatorBtn {
+        border: 1px solid #000;
+        margin: 0 10px 0 10px;
+        font-size: 15px;
+        font-weight: 800;
+        padding: 3px 15px;
+        border-radius: 5px;
+        background-color: white;
+        color: #000;
+
+        &:hover {
+            background-color: #5cc4bac7;
+        }
+
+        &__paginatorBtn img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
 div {
     color: black;
 }
+
 .user {
     font-size: 20px;
     padding: 15px;
@@ -104,19 +133,23 @@ div {
     font-weight: 800;
     color: white;
     background-color: #E79318;
+
     &:hover {
         background-color: rgba(133, 133, 133, 0.76);
     }
 }
+
 .selectedPage {
     cursor: default;
     font-weight: 900;
     color: black;
     background-color: #5cc4bac7;
 }
-span { 
-    cursor: default; 
+
+span {
+    cursor: default;
 }
+
 .pageNumber {
     display: flex;
     text-align: center;
@@ -128,16 +161,5 @@ span {
     width: 25px;
     height: 25px;
 }
-button {
-    border: 1px solid #000;
-    margin: 0 10px 0 10px;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 3px 15px;
-    border-radius: 5px;
-    background-color: white;
-    color: #000;
-    &:hover {
-        background-color: #5cc4bac7;
-    }
-}
+
+button {}

@@ -1,16 +1,18 @@
 import s from './profileinfo.module.scss';
 import ProfileStatusWithHooks from './profileStatusWithHooks';
+import userAvataLarge from "../../../assets/images/userAvataLarge.png";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
         return <div className={s.profilePreloader}><img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="preloader" /></div>
     }
+    console.log(props.profile.photos.large);
     return (
         <div>
             <div className={s.aboutuser}>
                 <div className={s.avatardiv}>
                     <div className={s.avatardiv__wrapper}>
-                        <img className={s.avatardiv__avatar} src={props.profile.photos.large} alt="Avatar"></img>
+                        <img className={s.avatardiv__avatar} src={props.profile.photos.large ? props.profile.photos.large : userAvataLarge} alt="Avatar"></img>
                         <div className={s.avatardiv__name}>{props.profile.fullName}</div>
                     </div>
                 </div>

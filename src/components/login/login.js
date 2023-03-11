@@ -13,15 +13,15 @@ class Login extends React.Component {
     onSubmit = (formData) => {
         this.props.login(formData.email, formData.password, formData.rememberMe);
     }
-    render () {
+    render() {
         if (this.props.isAuth) {
             return <Navigate to={"/profile/" + this.props.userId} />
         }
         return (
             <div class={s.login}>
-            <h1 class={s.login__title}>Login</h1>
-            <LoginRedaxForm onSubmit={this.onSubmit} />
-        </div>
+                <h1 class={s.login__title}>Login</h1>
+                <LoginRedaxForm onSubmit={this.onSubmit} />
+            </div>
         )
     }
 }
@@ -38,20 +38,21 @@ const LoginForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit} className={s.login__form}>
             <div>
-                <Field placeholder={"Email"} name={"email"} component={Input} validate={[required]} />
+                <Field className={s.login__input} placeholder={"Email"} name={"email"} component={Input} validate={[required]} />
             </div>
             <div>
-                <Field placeholder={"Password"} name={"password"} type={"password"} component={Input} validate={[required]} />
+                <Field className={s.login__input} placeholder={"Password"} name={"password"} type={"password"} component={Input} validate={[required]} />
             </div>
             {props.error && <div className={s.formCommonError}>
                 {props.error}
             </div>
             }
-            <div>
-                <Field type={"checkbox"} name={"rememberMe"} component={Input} /> Remember me
+            <div className={s.login__checkbox}>
+                <Field className={s.login__customCheckbox} id={"happy"} type={"checkbox"} name={"rememberMe"} component={Input}/>
+                <label className={s.login__label} for={"happy"}>Remember me</label>
             </div>
             <div>
-                <button>Login</button>
+                <button className={s.login__button}>Login</button>
             </div>
         </form>
     )

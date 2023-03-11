@@ -17,6 +17,9 @@
         display: flex;
         justify-content: center;
     }
+    &__wrapper img {
+
+    }
 
     &__name {
         font-size: 20px;
@@ -26,8 +29,8 @@
 }
 
 .avatardiv img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .blockuserContacts {

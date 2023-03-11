@@ -34,9 +34,12 @@
     }
 
     &__loginLink {
+        padding: 5px 25px;
         color: white;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 700;
+        background-color: rgb(60, 134, 116);
+        border-radius: 10px;
     }
 }
 

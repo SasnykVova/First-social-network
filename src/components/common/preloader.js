@@ -14,6 +14,8 @@ const Preloader = (props) => {
                 follow={props.follow} 
                 followingInProgress={props.followingInProgress}
                 portionSize={props.portionSize}
+                setPortionNumber={props.setPortionNumber}
+                portionNumber={props.portionNumber}
                 />}
         </div>
     )
